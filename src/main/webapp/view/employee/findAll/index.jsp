@@ -11,7 +11,7 @@
 <%--<% Object employees = request.getAttribute("employees"); %>--%>
 <%--<%= employees%>--%>
 
-<p><a href='<c:url value="/employees/create" />'>Добавление нового</a></p>
+<p><a href='<c:url value="/employees/create" />'>Добавление нового сотрудника</a></p>
 <table>
     <tr>
         <th>Подразделение</th>
@@ -31,10 +31,10 @@
                 </c:if>
             </td>
             <td>
-                <a href='<c:url value="/employees/edit?id=${employee.id}" />'>Edit</a> |
+                <a href='<c:url value="/employees/edit?id=${employee.id}" />'>Edit employee</a> |
                 <form method="post" action='<c:url value="/employees/delete" />' style="display:inline;">
                     <input type="hidden" name="id" value="${employee.id}">
-                    <input type="submit" value="Delete">
+                    <input type="submit" value="Delete employee">
                 </form>
             </td>
         </tr>

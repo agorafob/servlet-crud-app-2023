@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/employees/find")
-public class FindAllServlet extends HttpServlet {
+public class FindAllEmployeeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -54,6 +54,6 @@ public class FindAllServlet extends HttpServlet {
         });
 
         req.setAttribute("employees", employeeWithDepartmentList);
-        getServletContext().getRequestDispatcher("/view/employee/findAll/index.jsp").forward(req, resp);
+        req.getServletContext().getRequestDispatcher("/view/employee/findAll/index.jsp").forward(req, resp);
     }
 }

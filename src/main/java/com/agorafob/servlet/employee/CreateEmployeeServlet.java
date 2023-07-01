@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 @WebServlet("/employees/create")
-public class CreateServlet extends HttpServlet {
+public class CreateEmployeeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/view/employee/create/index.jsp").forward(req, resp);

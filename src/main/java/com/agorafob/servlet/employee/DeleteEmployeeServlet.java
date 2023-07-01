@@ -9,7 +9,7 @@ import com.agorafob.service.EmployeeManageService;
 import java.io.IOException;
 
 @WebServlet("/employees/delete")
-public class DeleteServlet extends HttpServlet {
+public class DeleteEmployeeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         long id = Long.parseLong(req.getParameter("id"));

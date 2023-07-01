@@ -11,9 +11,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly("jakarta.servlet:jakarta.servlet-api:6.0.0")
+    compileOnly("jakarta.servlet:jakarta.servlet-api:5.0.0")
     implementation("org.postgresql:postgresql:42.6.0")
-    implementation("org.apache.tomcat:tomcat-jdbc:11.0.0-M7")
+    implementation("org.apache.tomcat:tomcat-jdbc:10.0.8")
     implementation("org.eclipse.jetty:apache-jstl:11.0.0")
     compileOnly("org.projectlombok:lombok:1.18.28")
     annotationProcessor("org.projectlombok:lombok:1.18.28")

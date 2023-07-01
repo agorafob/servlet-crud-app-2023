@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 @WebServlet("/employees/edit")
-public class EditServlet extends HttpServlet {
+public class EditEmployeeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         EmployeeManageService ems = new EmployeeManageService();
@@ -20,9 +20,9 @@ public class EditServlet extends HttpServlet {
             Employee employee = ems.get(id);
             if (Objects.nonNull(employee)) {
                 req.setAttribute("employee", employee);
-                getServletContext().getRequestDispatcher("/view/employee/edit/index.jsp").forward(req, resp);
+                req.getServletContext().getRequestDispatcher("/view/employee/edit/index.jsp").forward(req, resp);
             } else {
-                getServletContext().getRequestDispatcher("/view/notfound.jsp").forward(req, resp);
+                req.getServletContext().getRequestDispatcher("/notfound.jsp").forward(req, resp);
             }
     }
 
